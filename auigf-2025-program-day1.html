@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>auIGF 2025 Program — Day 1</title>
+<style>
+  :root{
+    --ink:#0e1b2a;
+    --muted:#4b5b6a;
+    --bg:#ffffff;
+    --panel:#0f3b4a;         /* deep teal for time column + header bar */
+    --panel-2:#124d60;       /* lighter teal for alternation */
+    --key:#f6c828;           /* golden highlight (registration) */
+    --rule:#d9e2ec;          /* light grid lines */
+    --brand:#0f3b4a;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f13;
+      --ink:#203040;
+      --muted:#9fb0c1;
+      --rule:#203040;
+    }
+  }
+
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.5;
+  }
+
+  .wrap{
+    max-width: 920px;
+    margin: 24px auto 64px;
+    padding: 0 20px;
+  }
+
+  /* Title */
+  .title{
+    font-size: clamp(28px, 4.2vw, 48px);
+    text-align:center;
+    font-weight: 800;
+    color: var(--brand);
+    letter-spacing: .3px;
+    margin: 8px 0 8px;
+  }
+  .subtitle{
+    text-align:center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+  .dayhead{
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    margin: 28px 0 14px;
+    color: var(--ink);
+  }
+
+  /* Table */
+  .program{
+    width:100%;
+    border-collapse: separate;
+    border-spacing:0;
+    overflow:hidden;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  }
+  .program thead th{
+    text-transform: none;
+    font-size: 1.05rem;
+    letter-spacing: .2px;
+    padding: 14px 16px;
+    color: #fff;
+    background: var(--panel);
+    border-bottom: 2px solid var(--rule);
+    text-align: left;
+  }
+  .program thead th:nth-child(1){ width: 190px; }
+  .program thead th:nth-child(2){ width: auto; }
+
+  .slot{
+    vertical-align: top;
+  }
+
+  .time{
+    background: var(--panel);
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 190px;
+    padding: 14px 16px;
+    border-right: 1px solid rgba(255,255,255,.1);
+  }
+  /* alternating tone for time column */
+  tr.alt .time{ background: var(--panel-2); }
+
+  .desc{
+    background: #fff;
+    padding: 14px 18px;
+    border-left: none;
+  }
+  .title-sm{
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #0a2b39;
+  }
+  .lead{
+    margin-top: 6px;
+  }
+  .sponsor{
+    margin-top: 8px;
+    font-weight: 700;
+    color: #0f3b4a;
+    font-size: .95rem;
+  }
+  .muted{
+    color: var(--muted);
+  }
+
+  /* highlight row (e.g., Registration, Lunch, Tea) */
+  .highlight .desc{ background: var(--key); }
+  .highlight .title-sm{ color: #111; }
+  .break .desc{ background: #f4f7fb; }
+
+  /* lists */
+  .desc ul{ margin: 6px 0 0 1.1rem; }
+  .desc li{ margin: .15rem 0; }
+
+  /* grid lines */
+  .program tbody tr + tr td{ border-top: 1px solid var(--rule); }
+  .program tbody td.desc{ border-left: 1px solid var(--rule); }
+
+  /* Print: single-page friendly */
+  @media print{
+    body{ background:#fff; }
+    .wrap{ max-width: 100%; margin:0; padding:0 6mm; }
+    .title{ margin-top: 2mm; }
+    .program{ page-break-inside: avoid; box-shadow:none; }
+    .desc, .time, .program thead th{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="title">auIGF 2025 Program</h1>
+    <p class="subtitle">All times below are Adelaide time, ACST (UTC+9:30).<br>
+      Speakers are confirmed at the time of publishing, but may be subject to change.</p>
+
+    <h2 class="dayhead">Day 1: Tuesday, 23 September 2025</h2>
+
+    <table class="program" role="table" aria-label="auIGF 2025 Program Day 1">
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Program Description</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="slot highlight">
+          <td class="time">9:00 – 10:00AM</td>
+          <td class="desc">
+            <div class="title-sm">Registration</div>
+            <p class="lead">Collect your badge and enjoy some morning tea while meeting fellow participants.</p>
+          </td>
+        </tr>
+
+        <tr class="slot alt">
+          <td class="time">10:00 – 11:30AM</td>
+          <td class="desc">
+            <div class="title-sm">Opening Plenary</div>
+            <p class="lead">A Welcome to Country and remarks from the Chair lead into a keynote speech from international Internet Governance expert and ICANN Board Member Chris Buckridge.</p>
+            <p>A multi-stakeholder panel will then unpack the event’s big themes and invite audience reflection. The session will help to set Australia’s Internet governance agenda for 2025.</p>
+            <p><strong>Panellists:</strong></p>
+            <ul>
+              <li>Michael Brown MP – South Australia’s Assistant Minister for Artificial Intelligence and the Digital Economy</li>
+              <li>Johanna Weaver – Tech Policy Design Institute (TPDi)</li>
+              <li>Christine Runnegar – Internet Society</li>
+              <li>Rohan Sachdeva – youth voice</li>
+            </ul>
+            <p><strong>MC:</strong></p>
+            <ul>
+              <li>Jordan Carter – auDA</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr class="slot">
+          <td class="time">11:40AM – 12:40PM</td>
+          <td class="desc">
+            <div class="title-sm">The Commonwealth in Conversation: WSIS+20 Reflections</div>
+            <p>Australia's negotiating team will take stock of two decades of the WSIS framework and highlight priorities for Australia as the WSIS+20 review approaches. In this dynamic session, expect insights into negotiation dynamics and to have your questions answered.</p>
+            <p><strong>Speakers:</strong></p>
+            <ul>
+              <li>William Lee – Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts</li>
+              <li>Cheryl Langdon-Orr – Internet Australia</li>
+            </ul>
+            <p class="sponsor">Sponsored by the Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts</p>
+          </td>
+        </tr>
+
+        <tr class="slot alt break">
+          <td class="time">12:40 – 1:40PM</td>
+          <td class="desc">
+            <div class="title-sm">Lunch Break</div>
+            <p>Lunchtime session available for those who wish to grab some lunch and listen in.</p>
+          </td>
+        </tr>
+
+        <tr class="slot">
+          <td class="time">12:50 – 1:20PM</td>
+          <td class="desc">
+            <div class="title-sm">Lunch Session</div>
+            <p><strong>Sovereignty in the Digital Age: Reclaiming Identity, Governance, and Power</strong></p>
+            <p>This session explores digital sovereignty, and how uniting intent, consent, and governance in digital infrastructure can reclaim power from extractive models and seed a plural, regenerative digital future for all society.</p>
+            <p><strong>Speakers:</strong></p>
+            <ul>
+              <li>Simon O'Toole – Alliance ICT, Leap Foundation &amp; Dreaming Machines</li>
+              <li>Alexar Pendashteh – Linux Victoria &amp; Goodness Triangle</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr class="slot alt">
+          <td class="time">1:40 – 2:40PM</td>
+          <td class="desc">
+            <div class="title-sm">No One Left Behind – Digital Inclusion &amp; AI Equity</div>
+            <p>Everyone in Australia deserves the chance to succeed in today’s digital society. With 6.6 million Australians lacking capacity to properly participate in online life, this panel will explore the imperative for national action on digital inclusion, covering key examples of strategy, leadership, and opportunities for policy to help deliver broader benefit.</p>
+            <p><strong>Speakers:</strong></p>
+            <ul>
+              <li>Dane Glerum – Good Things Australia</li>
+              <li>Dr Kim Osman – Digital Media Research Centre, Queensland University of Technology</li>
+              <li>Heather Rea – Telstra</li>
+              <li>Nicole Rossini – NSW Telco Authority</li>
+            </ul>
+            <p><strong>Moderator:</strong></p>
+            <ul>
+              <li>Tim Marshall – Australian Digital Inclusion Alliance</li>
+            </ul>
+            <p class="sponsor">Sponsored by ICANN</p>
+          </td>
+        </tr>
+
+        <tr class="slot">
+          <td class="time">2:50 – 3:50PM</td>
+          <td class="desc">
+            <div class="title-sm">Digital Platform Ownership – Diversity, Resilience &amp; Trust</div>
+            <p>New data reveal Australia’s Internet supply chain is dominated by key global tech giants. Panellists examine what this concentration means for media diversity, democratic resilience and public trust, and ask whether the firms are now both “too big to fail” and “too big to govern”.</p>
+            <p><strong>Speakers:</strong></p>
+            <ul>
+              <li>Cameron McTernan – The University of South Australia</li>
+              <li>Terry Flew – The University of Sydney</li>
+              <li>Mr Ram Mohan – Identity Digital</li>
+            </ul>
+            <p><strong>Moderator:</strong></p>
+            <ul>
+              <li>Victoria Fielding – The University of Adelaide</li>
+            </ul>
+            <p class="sponsor">Sponsored by Identity Digital</p>
+          </td>
+        </tr>
+
+        <tr class="slot alt break">
+          <td class="time">3:50 – 4:15PM</td>
+          <td class="desc">
+            <div class="title-sm">Afternoon Tea</div>
+          </td>
+        </tr>
+
+        <tr class="slot">
+          <td class="time">4:15 – 5:15PM</td>
+          <td class="desc">
+            <div class="title-sm">Multi‑stakeholder Ways to Improve Trust in Australia’s Digital Ecosystem</div>
+            <p>Co-regulation in the communications sector is under pressure. Consumers criticise it, and the trend is towards more direct regulation. Could multi-stakeholder methods help solve problems and reduce the need for regulation? Could lessons in this sector be applied more broadly on Internet issues?</p>
+            <p><strong>Speakers:</strong></p>
+            <ul>
+              <li>Luke Coleman – Australian Telecommunications Alliance</li>
+              <li>Carol Bennett – Australian Communications Consumer Action Network (ACCAN)</li>
+              <li>Sam Grunhard – Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts</li>
+              <li>Bruce Tonkin – auDA</li>
+              <li>Zoe Hawkins – Tech Policy Design Institute (TPDi)</li>
+            </ul>
+            <p><strong>Moderator:</strong></p>
+            <ul>
+              <li>Narelle Clark – Internet Association of Australia (IAA)</li>
+            </ul>
+            <p class="sponsor">Sponsored by the Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts</p>
+          </td>
+        </tr>
+
+        <tr class="slot alt break">
+          <td class="time">5:15 – 6:30PM</td>
+          <td class="desc">
+            <div class="title-sm">Networking Event <span class="muted">sponsored by Verisign</span></div>
+            <p>Networking drinks will be served at the venue immediately after the final session concludes.</p>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
